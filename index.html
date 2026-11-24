@@ -3,140 +3,261 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="오우림의 개발 포트폴리오. IoT 운영, 엣지 AI, 임베디드 시스템, 위치 추정 프로젝트와 경력을 소개합니다.">
-  <meta name="theme-color" content="#f9f9f5">
-  <title>오우림 | 개발 포트폴리오</title>
-  <link rel="stylesheet" href="./styles.css?v=3">
+  <meta name="description" content="오우림의 개발 포트폴리오. 임베디드, 엣지 AI, 위치 추정과 대규모 IoT 운영 경험을 소개합니다.">
+  <meta name="theme-color" content="#f8f9fc">
+  <title>오우림 | IoT · 임베디드 개발 포트폴리오</title>
+  <link rel="stylesheet" href="./styles.css?v=4">
 </head>
 <body id="top">
   <a class="skip" href="#main">본문으로 건너뛰기</a>
   <header class="site-header">
     <div class="shell header-inner">
-      <a class="brand" href="#top">오우림<span>.</span></a>
+      <a class="brand" href="#top">오우림</a>
       <nav aria-label="주요 메뉴">
-        <a href="#work">경험</a><a href="#skills">기술</a><a href="#career">이력</a>
+        <a href="#work">실무</a>
+        <a href="#projects">프로젝트</a>
+        <a href="#skills">기술</a>
+        <a href="#career">경력</a>
       </nav>
     </div>
   </header>
+
   <main id="main" tabindex="-1">
     <section class="hero shell" aria-labelledby="hero-title">
       <div class="hero-copy">
-        <p class="label">IoT · Edge AI · Embedded</p>
-        <h1 id="hero-title">안녕하세요,<br>오우림입니다<span>.</span></h1>
-        <p class="lead">꾸준히, 즐겁게 개발하고 있습니다. 센서와 펌웨어부터 모델 배포, 장치 운영까지 현장에서 쓰이는 시스템을 개발해 왔습니다.</p>
-        <a class="button" href="#work">주요 경험 보기</a>
+        <p class="hero-identity">IoT · 임베디드 개발자</p>
+        <h1 id="hero-title">센서에서<br><span>서비스까지.</span></h1>
+        <p class="hero-intro">센서 데이터를 수집하는 펌웨어부터 장치에서 실행되는 AI 모델까지 개발합니다. 모토브에서는 택시용 IoT 장치의 소프트웨어 개발과 운영을 맡았습니다.</p>
+        <div class="hero-actions">
+          <a class="button" href="#work">실무 경험 보기</a>
+          <a class="secondary-link" href="#projects">프로젝트 둘러보기</a>
+        </div>
       </div>
       <figure class="portrait">
-        <img src="./assets/profile.webp" alt="성곽과 억새가 보이는 야외에 서 있는 오우림" width="675" height="900" fetchpriority="high">
+        <img src="./assets/profile.webp" alt="성곽과 억새 앞에 서 있는 오우림" width="675" height="900" fetchpriority="high">
       </figure>
     </section>
 
-    <section class="impact" aria-label="모토브 프로젝트 주요 성과">
-      <dl class="shell metrics">
-        <div><dt>IoT 장치 운영 경험</dt><dd>약 2,000<span>대</span></dd></div>
-        <div><dt>이상 감지 모델 실운용</dt><dd>약 1,600<span>대</span></dd></div>
-        <div><dt>Wi-Fi AP 기반 위치 오차율 감소</dt><dd>60<span>%</span></dd></div>
-      </dl>
-    </section>
+    <section class="work section" id="work" aria-labelledby="work-title">
+      <div class="shell">
+        <header class="section-heading">
+          <p class="eyebrow">2022.10–2024.06 <span>·</span> 주식회사 모토브</p>
+          <h2 id="work-title">도심을 달리는 IoT</h2>
+          <p>택시 지붕에 설치하는 광고 디스플레이인 VRD의 Android 소프트웨어를 개발하고, 장치 데이터 수집과 원격 관제를 담당했습니다.</p>
+        </header>
 
-    <section class="shell section" id="work" aria-labelledby="work-title">
-      <p class="label">Selected experience</p>
-      <h2 id="work-title">주요 경험</h2>
-      <article class="feature">
-        <div class="feature-intro">
-          <p class="label">MOTOV · 2022.10–2024.06</p>
-          <h3>택시 지붕 위에서<br>동작하는 IoT</h3>
-          <p>모토브의 VRD는 양면 디스플레이로 광고를 송출하고 20여 종의 센서로 장치와 주변 환경을 관측합니다. Android 기반 소프트웨어 개발과 장치 운영을 담당했습니다.</p>
-          <img class="motov-photo" src="./assets/motov.webp" alt="택시 지붕에 설치된 모토브 VRD 광고 디스플레이" width="640" height="360">
-        </div>
-        <div class="feature-details">
-          <details open><summary>엣지 AI와 실시간 이상 감지</summary><p>LSTM 오토인코더가 10종의 센서 데이터를 분석해 장치 이상을 감지하도록 개발했습니다. 데이터 수집, 학습, 배포, 추론 소프트웨어와 실시간 모니터링을 개발했습니다. 도심 환경 데이터를 장치에서 추론하는 Android 서비스도 개발·운영했습니다.</p></details>
-          <details><summary>GPS·IMU 융합과 Wi-Fi 위치 추정</summary><p>EKF로 GPS와 IMU 데이터를 융합해 위치 오차율을 기존 대비 40% 줄였습니다. Wi-Fi AP 정보를 활용한 위치 추정에서는 기존 대비 60% 줄였습니다.</p></details>
-          <details><summary>원격 관제와 운영 데이터</summary><p>동적 주소를 사용하는 VRD를 원격으로 진단할 수 있는 관제 시스템과 운영 이슈 대응용 Django 백엔드·API를 개발했습니다. AWS, ActiveMQ, Kafka, Elasticsearch, Kibana를 활용해 장치 데이터와 로그를 수집하고 모니터링했습니다.</p></details>
-          <details><summary>펌웨어와 교통 시뮬레이션</summary><p>ESP32와 FreeRTOS에서 Wi-Fi Mesh·BLE 기반 콜드체인 장치 펌웨어를 개발했습니다. ESP32 기반 Wi-Fi 정보 수집 기능과 Rockchip 기반 무선 통신·영상 응용 개발에도 참여했습니다. SUMO와 Ray로 강화학습 파이프라인을 구축했습니다.</p></details>
-        </div>
-      </article>
-      <div class="research">
-        <h3>연구·학업 프로젝트</h3>
-        <div class="entry"><h4>UWB·VIO 기반 주차 궤적 생성</h4><p>자동주차 기능을 위한 주차 궤적 생성 방법입니다. 특허 10-2274806 · 2021.06 등록</p></div>
-        <div class="entry"><h4>UWB 실시간 위치 추정</h4><p>대학원 국책과제에서 STM32F4와 nRF52840에 DW1000·DW3000 모듈을 탑재해 실시간 위치 추정 시스템을 구현했습니다. 석사과정 논문에서는 iPhone의 UWB 기능을 활용했습니다.</p></div>
-        <div class="entry"><h4>RF 신호 기반 가시선 판별</h4><p>기술이전 과제에서 DNN·CNN으로 RF 채널 임펄스 응답을 분석해 가시선 여부를 판별했습니다. STM32에서 데이터를 수집하고 NLOS 신호를 분류하는 펌웨어도 개발했습니다.</p></div>
-        <div class="entry"><h4>Transformer 기반 이상 감지 연구</h4><p>Transformer를 적용한 무기체계 이상 감지 연구를 수행하고 국제 학회에서 발표했습니다.</p></div>
-        <div class="archive" aria-labelledby="archive-title">
-          <h3 id="archive-title">대학·대학원 프로젝트 8건</h3>
-          <details><summary>중장비 협착 방지 시스템</summary>
-            <p class="meta">2021.11 – 2022.02 · 개념증명 PoC · PM (총 3명)</p>
-            <p>nRF52840과 FreeRTOS 기반으로 태스크 구조를 설계하고 UWB 1:N 통신과 BLE 세션 수립 방식을 개발했습니다.</p>
-            <p class="meta">NRF52 · UWB · RTOS · Kalman</p>
-          </details>
-          <details><summary>스마트폰 기반 UWB AoA-ARKit 융합 측위 기술</summary>
-            <p class="meta">2021.08 – 2021.10 · 졸업논문 · 단독수행</p>
-            <p>Swift로 iOS 앱을 개발하고, 확장 칼만 필터로 UWB의 절대 좌표계와 ARKit의 상대 좌표계를 융합해 위치 추정의 안정성을 높였습니다.</p>
-            <p class="meta">iOS · Kalman · UWB · ARKit · Swift</p>
-          </details>
-          <details><summary>딥러닝 &amp; AEKF기반 AoA 측위 성능 향상 기술</summary>
-            <p class="meta">2021.06 – 2021.09 · 기술이전 · 단독수행</p>
-            <p>적응형 확장 칼만 필터와 DNN 기반 NLOS 분류 모델을 설계하고 STM32에 탑재했습니다. UWB 데이터 수신 인터페이스와 위치 표출 GUI도 만들었습니다.</p>
-            <p class="meta">Python · Kalman · UWB · DeepLearning · STM32 · PyQt</p>
-          </details>
-          <details><summary>EKF 기반 TDoA 알고리즘</summary>
-            <p class="meta">2021.04 – 2021.06 · 국책과제 · 알고리즘 개발 (총 2명)</p>
-            <p>상용 UWB RTLS의 원시 데이터를 TCP 소켓으로 수신하는 라이브러리를 만들고, 수집한 데이터로 EKF 기반 알고리즘을 검증했습니다.</p>
-            <p class="meta">Python · UWB · RTLS · TDoA · Linux</p>
-          </details>
-          <details><summary>교통량 예측 기반 미세먼지 시뮬레이터</summary>
-            <p class="meta">2020.08 – 2020.11 · 연구용역 · 단독수행</p>
-            <p>OpenStreetMap으로 서울 도로를 모델링하고 SUMO와 Python을 연동했습니다. PyQt에서 25개 자치구의 교통량·미세먼지를 조회하고 주요 진입로 12곳의 흐름을 제어할 수 있게 했습니다.</p>
-            <p class="meta">Python · PyQt · SUMO · TrafficSimulation · Linux</p>
-          </details>
-          <details><summary>스마트폰 센서 기반 VIO+GPS 융합 측위 시스템</summary>
-            <p class="meta">2020.05 – 2020.10 · 연구용역 · 안드로이드 어플리케이션 개발 보조, 위치 초기화 알고리즘 개발 (총2명)</p>
-            <p>GPS가 약한 터널에서도 위치를 추정하도록 VIO와 GPS를 융합했습니다. 좌표계 변환과 관성 센서 누적 오차를 줄이는 보정 알고리즘을 개발했습니다.</p>
-            <p class="meta">SLAM · Android · GPS · VINS · Visual Inertial Odometry · EKF</p>
-          </details>
-          <details><summary>출입 인원 계수 시스템</summary>
-            <p class="meta">2018.10 – 2018.12 · 개인 프로젝트 · 영상처리 알고리즘, DB 연동 (총 4명)</p>
-            <p>Raspberry Pi와 OpenCV로 영상에서 배경을 제거하고 객체를 분류해 출입 여부를 판별했습니다. 계수 결과는 MongoDB와 연동해 앱에서 실시간으로 확인할 수 있게 했습니다.</p>
-            <p class="meta">OpenCV · MongoDB · ReactNative · RaspberryPi</p>
-          </details>
-          <details><summary>기상 관측 드론</summary>
-            <p class="meta">2017.02 – 2017.03 · 개인 프로젝트 · 단독수행</p>
-            <p>Arduino로 미세먼지·온습도·이산화탄소 센서 값을 읽고 Bluetooth로 지상 관측소에 전송했습니다. 드론 하드웨어도 직접 구성했습니다.</p>
-            <p class="meta">Drone · Bluetooth · Embedded</p>
-          </details>
+        <article class="case-study" aria-label="모토브 VRD 개발 및 운영 성과">
+          <figure class="case-photo">
+            <img src="./assets/motov.webp" alt="택시 지붕에 설치된 모토브 VRD 광고 디스플레이" width="640" height="360">
+            <figcaption>모토브 차량용 광고 디스플레이(VRD)</figcaption>
+          </figure>
+          <dl class="metrics">
+            <div>
+              <dt>서울·경기 IoT 장치 운영 규모</dt>
+              <dd><span class="qualifier">약</span> 2,000<span>대</span></dd>
+            </div>
+            <div>
+              <dt>이상 감지 모델 적용 장치</dt>
+              <dd><span class="qualifier">약</span> 1,600<span>대</span></dd>
+            </div>
+            <div>
+              <dt>Wi-Fi AP 기반 위치 오차율 감소</dt>
+              <dd>60<span>%</span></dd>
+            </div>
+          </dl>
+        </article>
+
+        <div class="work-topics">
+          <article>
+            <h3>장치 상태를 실시간으로 감지</h3>
+            <p>10종의 센서 데이터를 학습한 LSTM 오토인코더로 장치 이상을 감지했습니다. 데이터 수집부터 모델 학습·배포, 장치 내 추론, 실시간 모니터링과 모델 업데이트까지 개발했습니다. 도심 환경을 장치에서 추론하는 Android 서비스도 개발·운영했습니다.</p>
+          </article>
+          <article>
+            <h3>위치 추정 정확도 개선</h3>
+            <p>확장 칼만 필터(EKF)로 GPS와 IMU 데이터를 융합해 위치 오차율을 기존 대비 40% 줄였습니다. Wi-Fi 액세스 포인트 정보를 활용한 방식에서는 오차율을 기존 대비 60% 줄였습니다.</p>
+          </article>
+          <article>
+            <h3>장치 회수 없이 원격 진단</h3>
+            <p>동적 주소를 사용하는 VRD를 진단할 수 있는 원격 관제 시스템과 운영 이슈에 대응하는 Django 백엔드·API를 개발했습니다. AWS로 장치 데이터와 로그를 수집하고, ActiveMQ·Kafka로 처리한 뒤 Elasticsearch와 Kibana로 모니터링했습니다.</p>
+          </article>
+          <article>
+            <h3>연결 기능과 시뮬레이션 개발</h3>
+            <p>ESP32와 FreeRTOS에서 Wi-Fi 메시·BLE 기반 콜드체인 장치 펌웨어와 Wi-Fi 정보 수집 기능을 개발했습니다. Rockchip 기반 무선 통신·영상 응용을 다뤘으며, SUMO와 Ray로 교통 시뮬레이션 강화학습 파이프라인을 구축했습니다.</p>
+          </article>
         </div>
       </div>
+    </section>
+
+    <section class="projects section shell" id="projects" aria-labelledby="projects-title">
+      <header class="section-heading">
+        <p class="eyebrow">2017–2022 <span>·</span> 대학·대학원 프로젝트</p>
+        <h2 id="projects-title">연구와 프로젝트</h2>
+        <p>실내외 위치 추정부터 산업 안전, 교통 시뮬레이션까지. 프로젝트를 펼치면 맡은 역할과 구현 내용을 볼 수 있습니다.</p>
+      </header>
+
+      <div class="project-grid">
+        <details class="project">
+          <summary>
+            <span class="project-meta">2021.11–2022.02 <span>·</span> 개념 증명</span>
+            <span class="project-title">중장비 협착 방지 시스템</span>
+            <span class="project-intro">중장비와 작업자 사이의 거리를 측정해 충돌 위험을 알리는 시스템</span>
+          </summary>
+          <div class="project-detail">
+            <p class="role">프로젝트 관리 · 3인 팀</p>
+            <p>nRF52840과 FreeRTOS에서 태스크 구조를 설계하고, UWB 일대다 통신과 BLE 세션 수립 방식을 구현했습니다.</p>
+            <p class="stack">nRF52840 · UWB · BLE · FreeRTOS</p>
+          </div>
+        </details>
+        <details class="project">
+          <summary>
+            <span class="project-meta">2021.08–2021.10 <span>·</span> 석사과정 졸업논문</span>
+            <span class="project-title">UWB와 ARKit을 결합한 실내 측위</span>
+            <span class="project-intro">iPhone의 UWB 도래각과 ARKit 위치 정보를 결합해 실내 측위를 안정화한 앱</span>
+          </summary>
+          <div class="project-detail">
+            <p class="role">단독 수행</p>
+            <p>Swift로 iOS 앱을 개발하고, 확장 칼만 필터로 UWB의 절대 좌표계와 ARKit의 상대 좌표계를 통합했습니다. 두 위치 정보를 결합한 뒤 측위 성능을 점검했습니다.</p>
+            <p class="stack">Swift · iOS · UWB AoA · ARKit · EKF</p>
+          </div>
+        </details>
+        <details class="project">
+          <summary>
+            <span class="project-meta">2021.06–2021.09 <span>·</span> 기술이전</span>
+            <span class="project-title">딥러닝을 활용한 UWB 측위 개선</span>
+            <span class="project-intro">비가시선 신호의 영향을 줄여 UWB 도래각 기반 측위 성능을 개선한 기술</span>
+          </summary>
+          <div class="project-detail">
+            <p class="role">단독 수행</p>
+            <p>RF 채널 임펄스 응답을 바탕으로 비가시선(NLOS) 신호를 분류하는 모델과 적응형 확장 칼만 필터를 설계했습니다. STM32에 모델을 탑재하고, UWB 데이터 수신 인터페이스와 위치 표시 GUI를 구현했습니다.</p>
+            <p class="stack">Python · TensorFlow/Keras · STM32 · PyQt · AEKF</p>
+          </div>
+        </details>
+        <details class="project">
+          <summary>
+            <span class="project-meta">2021.04–2021.06 <span>·</span> 국책과제</span>
+            <span class="project-title">UWB 도착 시간 차 기반 위치 추정</span>
+            <span class="project-intro">여러 수신기에 신호가 도착하는 시간 차를 이용한 실시간 위치 추정</span>
+          </summary>
+          <div class="project-detail">
+            <p class="role">알고리즘 개발 · 2인 팀</p>
+            <p>상용 UWB 실시간 위치 추정 장치의 원시 데이터를 TCP로 수신하는 라이브러리를 만들고, 수집한 데이터로 EKF 기반 TDoA 알고리즘을 검증했습니다.</p>
+            <p class="stack">Python · NumPy · UWB RTLS · TDoA · TCP</p>
+          </div>
+        </details>
+        <details class="project">
+          <summary>
+            <span class="project-meta">2020.08–2020.11 <span>·</span> 연구용역</span>
+            <span class="project-title">교통량 기반 미세먼지 시뮬레이터</span>
+            <span class="project-intro">서울의 교통 흐름이 달라질 때 자치구별 미세먼지 발생량을 비교하는 도구</span>
+          </summary>
+          <div class="project-detail">
+            <p class="role">단독 수행</p>
+            <p>OpenStreetMap으로 서울 도로망을 모델링하고 실제 교통량 측정치를 SUMO 시뮬레이션에 반영했습니다. PyQt 화면에서 25개 자치구의 교통량과 미세먼지를 확인하고 주요 진입로 12곳의 통행을 제어할 수 있도록 구현했습니다.</p>
+            <p class="stack">Python · PyQt · SUMO · OpenStreetMap</p>
+          </div>
+        </details>
+        <details class="project">
+          <summary>
+            <span class="project-meta">2020.05–2020.10 <span>·</span> 연구용역</span>
+            <span class="project-title">스마트폰 VIO·GPS 융합 측위</span>
+            <span class="project-intro">터널처럼 GPS가 약한 구간에서도 스마트폰의 위치를 이어서 추정하는 시스템</span>
+          </summary>
+          <div class="project-detail">
+            <p class="role">Android 앱 개발 보조 및 위치 초기화 알고리즘 개발 · 2인 팀</p>
+            <p>카메라·관성 센서 기반 위치 추정(VIO)과 GPS를 융합했습니다. 두 좌표계를 맞추는 변환 알고리즘과 관성 센서의 누적 오차를 줄이는 보정 알고리즘을 개발했습니다.</p>
+            <p class="stack">Android · Java · VINS Mono · GPS · EKF</p>
+          </div>
+        </details>
+        <details class="project">
+          <summary>
+            <span class="project-meta">2018.10–2018.12 <span>·</span> 개인 프로젝트</span>
+            <span class="project-title">출입 인원 계수 시스템</span>
+            <span class="project-intro">출입구 카메라로 입장과 퇴장을 구분하고 앱에서 인원수를 확인하는 시스템</span>
+          </summary>
+          <div class="project-detail">
+            <p class="role">영상 처리 알고리즘 및 DB 연동 · 4인 팀</p>
+            <p>Raspberry Pi와 OpenCV로 영상 배경을 제거하고 객체를 분류해 출입을 판단했습니다. 계수 결과를 MongoDB에 연동해 앱에서 실시간으로 확인할 수 있도록 했습니다.</p>
+            <p class="stack">Python · OpenCV · Raspberry Pi · MongoDB · React Native</p>
+          </div>
+        </details>
+        <details class="project">
+          <summary>
+            <span class="project-meta">2017.02–2017.03 <span>·</span> 개인 프로젝트</span>
+            <span class="project-title">기상 관측 드론</span>
+            <span class="project-intro">이동 중에 미세먼지, 온습도, 이산화탄소를 측정해 지상으로 전송하는 드론</span>
+          </summary>
+          <div class="project-detail">
+            <p class="role">단독 수행</p>
+            <p>드론 하드웨어를 직접 구성했습니다. Arduino에서 센서 값을 수집하고 Bluetooth로 지상 관측소에 전송하는 기능을 구현했습니다.</p>
+            <p class="stack">C++ · Arduino · ArduPilot · Bluetooth</p>
+          </div>
+        </details>
+      </div>
+
+      <aside class="research-notes" aria-label="등록 특허 및 국제 학회 발표">
+        <div>
+          <p class="note-meta">등록 특허 <span>·</span> 2021.06</p>
+          <h3>자동주차를 위한 UWB·VIO 기반 주차 궤적 생성</h3>
+          <p>특허 제10-2274806호</p>
+        </div>
+        <div>
+          <p class="note-meta">국제 학회 발표</p>
+          <h3>Transformer 기반 이상 감지</h3>
+          <p>무기체계의 이상을 감지하는 시스템을 구현하고 국제 학회에서 발표했습니다.</p>
+        </div>
+      </aside>
     </section>
 
     <section class="skills section" id="skills" aria-labelledby="skills-title">
-      <div class="shell">
-        <p class="label">Technical skills</p><h2 id="skills-title">기술 역량</h2>
-        <dl class="skill-list">
-          <div><dt>프로그래밍 언어</dt><dd>Python으로 알고리즘, 딥러닝과 Qt GUI를 개발합니다. Java·Kotlin은 Android 개발에, C/C++는 펌웨어와 Linux 응용 개발에 사용했습니다. Swift로 iOS 앱을 개발한 경험이 있습니다.</dd></div>
-          <div><dt>머신러닝</dt><dd>TensorFlow·Keras와 PyTorch로 회귀, 분류, 세그멘테이션 모델을 학습합니다. Phi-4, Mistral, gpt-oss의 로컬 실행과 파인튜닝, Ray RLlib 기반 분산 강화학습 경험이 있습니다.</dd></div>
-          <div><dt>임베디드와 통신</dt><dd>STM32, nRF52, ESP32, Arduino, Rockchip에서 센싱과 통신을 구현했습니다. FreeRTOS, UART, I²C, SPI, Wi-Fi, BLE, TCP/UDP와 펌웨어의 AWS 연동 경험이 있습니다.</dd></div>
-          <div><dt>위치 추정</dt><dd>UWB(TDoA·ToF·AoA), Wi-Fi 핑거프린팅, 카메라·IMU·GPS 융합으로 위치를 추정했습니다. Kalman Filter를 이동 경로 보정과 센서 융합에 활용했습니다. 비선형 상태 전이와 적응형 잡음 조정을 다뤘으며, SLAM, VINS Mono, Linux·ROS 기반 VINS Fusion을 사용했습니다.</dd></div>
-          <div><dt>서버와 IoT 운영</dt><dd>AWS IoT Core, EC2, S3, Athena로 데이터를 수집·분석했습니다. Docker, Django, ActiveMQ, Kafka, MQTT를 활용해 API와 장치 원격 제어·업데이트 기능을 개발했습니다. 서울·경기 지역에서 MQTT 브로커를 구축하고 약 2,000대의 장치를 운영했습니다.</dd></div>
-          <div><dt>비행 제어와 GUI</dt><dd>드론 모터·ESC 설정, 센서 보정, RTK·조종기 연동과 PID·EKF 기반 비행제어 최적화를 경험했습니다. ArduPilot, PX4, NAZA, N3를 활용했습니다. Python과 Qt로 크로스 플랫폼 GUI를 개발했습니다.</dd></div>
-        </dl>
-        <details class="toolbox">
-          <summary>사용한 도구와 기술 더 보기</summary>
-          <p>NumPy · Pandas · Selenium · Beautiful Soup · PySide · PyQt · ROS · RViz · SUMO · CNN · RNN · LSTM · Autoencoder · Transformer · GPT-OSS · Mistral · GLM · LFM</p>
-          <p>Android · iOS · Linux · Windows · FreeRTOS · Raspberry Pi · AVR · Nordic · TI · Jenkins · Protobuf · REST · gRPC · RTSP · Lucene · MongoDB · MySQL · Firebase · GitLab · Bitbucket · Jira · Confluence</p>
-        </details>
+      <div class="shell split">
+        <header class="section-heading">
+          <h2 id="skills-title">기술 역량</h2>
+          <p>장치 소프트웨어, 모델, 운영 시스템을 개발하며 사용한 기술입니다.</p>
+        </header>
+        <div>
+          <dl class="skill-list">
+            <div>
+              <dt>임베디드·앱 개발</dt>
+              <dd>C/C++로 펌웨어와 Linux 응용을 개발했습니다. STM32, nRF52, ESP32와 FreeRTOS에서 센서를 연결하고 UART·I²C·SPI, Wi-Fi·BLE를 활용했습니다. Android 앱은 Java·Kotlin, iOS 앱은 Swift를 사용했습니다.</dd>
+            </div>
+            <div>
+              <dt>머신러닝·엣지 AI</dt>
+              <dd>TensorFlow·Keras와 PyTorch로 회귀·분류·영상 분할 모델을 학습했습니다. Phi-4, Mistral, gpt-oss의 로컬 실행과 파인튜닝, Ray RLlib 기반 분산 강화학습 경험이 있습니다.</dd>
+            </div>
+            <div>
+              <dt>센서 융합·비행 제어</dt>
+              <dd>UWB(TDoA·ToF·AoA), Wi-Fi 핑거프린팅, 카메라·IMU·GPS 융합을 활용했습니다. 대학원 국책과제에서는 STM32F4·nRF52840과 DW1000·DW3000으로 UWB 실시간 위치 추정 시스템을 구현했습니다. ROS·VINS, RTK, PID·EKF를 활용한 위치 추정과 드론 비행 제어 경험도 있습니다.</dd>
+            </div>
+            <div>
+              <dt>백엔드·장치 운영</dt>
+              <dd>Python과 Django로 API를 개발하고, AWS IoT Core·EC2·S3·Athena로 장치 데이터를 수집·분석했습니다. MQTT 브로커를 구축해 장치 제어·업데이트를 운영했고, Python과 Qt로 크로스 플랫폼 GUI를 개발했습니다.</dd>
+            </div>
+          </dl>
+          <details class="toolbox">
+            <summary>추가 사용 기술 보기</summary>
+            <p>NumPy, Pandas, Selenium, Beautiful Soup, PySide, PyQt, RViz, SUMO, CNN, RNN, LSTM, Autoencoder, Transformer, GLM, LFM</p>
+            <p>Arduino, Rockchip, Raspberry Pi, AVR, Nordic, TI, ArduPilot, PX4, NAZA, N3, Windows, Docker, Jenkins, Protobuf, REST, gRPC, TCP/UDP, HTTP, RTSP, Lucene, MongoDB, MySQL, Firebase, GitLab, Bitbucket, Jira, Confluence</p>
+          </details>
+        </div>
       </div>
     </section>
 
-    <section class="shell section career" id="career" aria-labelledby="career-title">
-      <div><p class="label">Career</p><h2 id="career-title">경력</h2></div>
+    <section class="career section shell split" id="career" aria-labelledby="career-title">
+      <header class="section-heading"><h2 id="career-title">경력</h2></header>
       <ol class="timeline">
-        <li><span>2024.06 – 현재</span><strong>중견 방산기업</strong></li>
-        <li><span>2022.10 – 2024.06</span><strong>주식회사 모토브</strong></li>
-        <li><span>2022.02 – 2022.09</span><strong>숨고 개발·레슨 프리랜서</strong></li>
-        <li><span>2020.10 – 2022.05</span><strong>프로그래밍 과외</strong></li>
+        <li><span>2024.06–현재</span><strong>중견 방산기업 재직</strong></li>
+        <li><span>2022.10–2024.06</span><strong>주식회사 모토브</strong></li>
+        <li><span>2022.02–2022.09</span><strong>숨고 개발·레슨 프리랜서</strong></li>
+        <li><span>2020.10–2022.05</span><strong>프로그래밍 과외</strong></li>
       </ol>
     </section>
   </main>
-  <footer><div class="shell footer-inner"><p>© 오우림</p><a href="#top">맨 위로</a></div></footer>
+
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>오우림 <span>·</span> 개발 포트폴리오</p>
+      <a href="#top">맨 위로</a>
+    </div>
+  </footer>
 </body>
 </html>
