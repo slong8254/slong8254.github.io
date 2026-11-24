@@ -4,90 +4,112 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="slong8254의 개발 포트폴리오. 드론 경로 최적화와 운전 연습 학원 관리 웹 프로젝트를 소개합니다.">
-  <meta name="theme-color" content="#f3f5f1">
+  <meta name="theme-color" content="#11121b">
   <title>slong8254 | 개발 포트폴리오</title>
-  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./styles.css?v=2">
 </head>
 <body id="top">
   <a class="skip" href="#main">본문으로 건너뛰기</a>
-  <header class="site-header">
-    <div class="shell header-inner">
-      <a class="brand" href="#top">slong8254<span aria-hidden="true">.</span></a>
-      <nav aria-label="주요 메뉴">
-        <a href="#about">소개</a>
-        <a href="#projects">경험</a>
-        <a href="#background">이력</a>
-      </nav>
-      <a class="header-github" href="https://github.com/slong8254">GitHub</a>
-    </div>
-  </header>
-
-  <main id="main" class="shell" tabindex="-1">
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="hero-copy">
-        <p class="eyebrow">DEVELOPER PORTFOLIO</p>
-        <h1 id="hero-title">코드로 문제를<br>풀어가는 기록<span>.</span></h1>
-        <p class="intro">안녕하세요, slong8254입니다. 강화학습으로 드론 경로를 탐색하고, 수업 예약과 회원 관리를 위한 웹서비스를 만들고 있습니다.</p>
-        <div class="actions">
+  <div class="opening">
+    <header class="site-header">
+      <div class="shell header-inner">
+        <a class="brand" href="#top"><span class="brand-mark" aria-hidden="true"></span>slong8254</a>
+        <nav aria-label="주요 메뉴">
+          <a href="#projects">프로젝트</a>
+          <a href="#about">소개</a>
+          <a href="#background">이력</a>
+        </nav>
+        <a class="header-github" href="https://github.com/slong8254">GitHub</a>
+      </div>
+    </header>
+    <main id="main" tabindex="-1">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="shell hero-inner">
+          <p class="eyebrow">DEVELOPER PORTFOLIO</p>
+          <h1 id="hero-title">문제를 탐색하고,<br><span>해결을 설계합니다.</span></h1>
+          <p class="intro">안녕하세요, slong8254입니다. 강화학습 시뮬레이션부터 예약 관리 웹서비스까지, 문제에 맞는 도구를 코드로 구현합니다.</p>
           <a class="button primary" href="#projects">프로젝트 보기</a>
-          <a class="button secondary" href="https://github.com/slong8254">GitHub 프로필</a>
         </div>
-      </div>
-      <figure class="hero-art">
-        <div class="art-top"><span>PATH OPTIMIZATION</span><span>PYTHON / RL</span></div>
-        <div class="diagram" aria-hidden="true">
-          <div class="route">
-            <i class="segment first"></i><i class="segment second"></i><i class="segment third"></i><i class="segment fourth"></i>
-            <i class="node start"></i><i class="node middle"></i><i class="node finish"></i>
+        <div class="shell hero-caption"><span>드론 경로 탐색 콘셉트 이미지</span></div>
+      </section>
+
+      <section class="work section" id="projects" aria-labelledby="projects-title">
+        <div class="shell">
+          <p class="eyebrow">SELECTED WORK</p>
+          <h2 id="projects-title">프로젝트</h2>
+          <div class="project-grid">
+            <article class="project">
+              <div class="project-visual simulation" aria-hidden="true">
+                <div class="sim-frame">
+                  <div class="sim-header"><span>DRONE SIMULATION</span><span>30 × 30</span></div>
+                  <div class="sim-grid">
+                    <i class="obstacle one"></i><i class="obstacle two"></i>
+                    <i class="path first"></i><i class="path second"></i><i class="path third"></i>
+                    <i class="waypoint start"></i><i class="waypoint finish"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="project-details">
+                <p class="tech">Python <span>·</span> Streamlit</p>
+                <h3>드론 경로 최적화</h3>
+                <p>장애물과 목표 지점이 있는 격자에서 드론의 경로를 학습합니다. Streamlit에서 격자 조건을 바꾸고 에피소드별 탐색 과정을 확인할 수 있습니다.</p>
+                <a class="text-link" href="https://github.com/slong8254/drone_path_opti_rl" aria-label="드론 경로 최적화 소스 보기">GitHub에서 보기</a>
+              </div>
+            </article>
+            <article class="project">
+              <div class="project-visual service" aria-hidden="true">
+                <div class="app-frame">
+                  <div class="app-sidebar"><strong>Gosu Drive</strong><span>회원 관리</span><span class="selected">수업 예약</span></div>
+                  <div class="app-content">
+                    <strong>수업 예약 현황</strong>
+                    <div class="calendar">
+                      <span>월</span><span>화</span><span>수</span><span>목</span><span>금</span>
+                      <i></i><i class="slot"></i><i></i><i class="slot"></i><i></i>
+                      <i class="slot"></i><i></i><i></i><i></i><i class="slot"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="project-details">
+                <p class="tech">Django <span>·</span> HTMX</p>
+                <h3>Gosu Drive</h3>
+                <p>운전 연습 학원의 회원 관리와 수업 예약을 위한 관리자 웹서비스입니다. 회원과 예약 화면의 기본 구조를 만들고, 잔여시간 차감 및 복구 흐름을 문서화했습니다.</p>
+                <a class="text-link" href="https://github.com/slong8254/gosu_drive" aria-label="Gosu Drive 소스 보기">GitHub에서 보기</a>
+              </div>
+            </article>
           </div>
         </div>
-        <figcaption><span class="legend" aria-hidden="true"></span> 드론 경로 탐색 개념도</figcaption>
-      </figure>
-    </section>
+      </section>
 
-    <section class="section split" id="about" aria-labelledby="about-title">
-      <div>
-        <p class="eyebrow">ABOUT</p>
-        <h2 id="about-title">자기소개</h2>
-      </div>
-      <p class="section-copy">Python으로 경로 탐색 시뮬레이션을 구현하고, Django로 회원 관리와 수업 예약에 필요한 화면을 구성했습니다. 공개 저장소에서 프로젝트별 코드와 문서를 확인할 수 있습니다.</p>
-    </section>
-
-    <section class="section" id="projects" aria-labelledby="projects-title">
-      <p class="eyebrow">PROJECTS</p>
-      <h2 id="projects-title">경험사항</h2>
-      <div class="project-list">
-        <article class="project">
-          <div class="project-meta"><span>시뮬레이션</span><p>Python · Streamlit</p></div>
+      <section class="about section" id="about" aria-labelledby="about-title">
+        <div class="shell split">
           <div>
-            <h3>드론 경로 최적화</h3>
-            <p>장애물과 목표 지점이 있는 격자에서 단일 드론의 이동 경로를 학습합니다. Streamlit 화면에서 격자 조건을 바꾸고 에피소드별 탐색 과정을 확인할 수 있습니다.</p>
+            <p class="eyebrow">ABOUT</p>
+            <h2 id="about-title">자기소개</h2>
           </div>
-          <a class="text-link" href="https://github.com/slong8254/drone_path_opti_rl" aria-label="드론 경로 최적화 소스 보기">소스 보기</a>
-        </article>
-        <article class="project">
-          <div class="project-meta"><span>웹서비스</span><p>Django · HTMX</p></div>
-          <div>
-            <h3>Gosu Drive</h3>
-            <p>운전 연습 학원의 회원 관리와 수업 예약을 위한 관리자 웹서비스입니다. 회원 목록과 예약 화면의 기본 구조를 만들고, 예약에 따른 잔여시간 차감 및 복구 흐름을 문서화했습니다.</p>
+          <div class="about-copy">
+            <p>Python으로 경로 탐색 시뮬레이션을 구현하고, Django로 회원 관리와 수업 예약에 필요한 화면을 구성했습니다.</p>
+            <p>공개 저장소에 프로젝트별 코드와 구현 흐름을 기록하고 있습니다.</p>
+            <a class="text-link" href="https://github.com/slong8254">GitHub 프로필</a>
           </div>
-          <a class="text-link" href="https://github.com/slong8254/gosu_drive" aria-label="Gosu Drive 소스 보기">소스 보기</a>
-        </article>
-      </div>
-    </section>
+        </div>
+      </section>
 
-    <section class="section split background" id="background" aria-labelledby="background-title">
-      <div>
-        <p class="eyebrow">BACKGROUND</p>
-        <h2 id="background-title">이력</h2>
-      </div>
-      <dl>
-        <div><dt>학력</dt><dd>등록된 학력 정보가 없습니다.</dd></div>
-        <div><dt>경력</dt><dd>등록된 경력 정보가 없습니다.</dd></div>
-        <div><dt>자격증</dt><dd>등록된 자격증 정보가 없습니다.</dd></div>
-      </dl>
-    </section>
-  </main>
+      <section class="background section" id="background" aria-labelledby="background-title">
+        <div class="shell split">
+          <div>
+            <p class="eyebrow">BACKGROUND</p>
+            <h2 id="background-title">이력</h2>
+          </div>
+          <dl>
+            <div><dt>학력</dt><dd>등록된 학력 정보가 없습니다.</dd></div>
+            <div><dt>경력</dt><dd>등록된 경력 정보가 없습니다.</dd></div>
+            <div><dt>자격증</dt><dd>등록된 자격증 정보가 없습니다.</dd></div>
+          </dl>
+        </div>
+      </section>
+    </main>
+  </div>
 
   <footer class="site-footer">
     <div class="shell footer-inner">
