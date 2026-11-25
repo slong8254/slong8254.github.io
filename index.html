@@ -4,15 +4,15 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="오우림의 개발 포트폴리오. 임베디드, 엣지 AI, 위치 추정과 대규모 IoT 운영 경험을 소개합니다.">
-  <meta name="theme-color" content="#f8f9fc">
+  <meta name="theme-color" content="#152721">
   <title>오우림 | IoT · 임베디드 개발 포트폴리오</title>
-  <link rel="stylesheet" href="./styles.css?v=4">
+  <link rel="stylesheet" href="./styles.css?v=5">
 </head>
 <body id="top">
   <a class="skip" href="#main">본문으로 건너뛰기</a>
   <header class="site-header">
     <div class="shell header-inner">
-      <a class="brand" href="#top">오우림</a>
+      <a class="brand" href="#top">오우림<span>개발 포트폴리오</span></a>
       <nav aria-label="주요 메뉴">
         <a href="#work">실무</a>
         <a href="#projects">프로젝트</a>
@@ -23,20 +23,23 @@
   </header>
 
   <main id="main" tabindex="-1">
-    <section class="hero shell" aria-labelledby="hero-title">
-      <div class="hero-copy">
-        <p class="hero-identity">IoT · 임베디드 개발자</p>
-        <h1 id="hero-title">센서에서<br><span>서비스까지.</span></h1>
-        <p class="hero-intro">센서 데이터를 수집하는 펌웨어부터 장치에서 실행되는 AI 모델까지 개발합니다. 모토브에서는 택시용 IoT 장치의 소프트웨어 개발과 운영을 맡았습니다.</p>
-        <div class="hero-actions">
-          <a class="button" href="#work">실무 경험 보기</a>
-          <a class="secondary-link" href="#projects">프로젝트 둘러보기</a>
+    <div class="hero-band">
+      <section class="hero shell" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="hero-identity">오우림 <span>·</span> IoT · 임베디드 개발자</p>
+          <h1 id="hero-title">센서에서<br><span>서비스까지.</span></h1>
+          <p class="hero-intro">센서 데이터를 수집하는 펌웨어부터 장치에서 실행되는 AI 모델까지 개발합니다. 모토브에서는 택시용 IoT 장치의 소프트웨어 개발과 운영을 맡았습니다.</p>
+          <div class="hero-actions">
+            <a class="button" href="#work">실무 경험 보기</a>
+            <a class="secondary-link" href="#projects">연구·프로젝트</a>
+          </div>
         </div>
-      </div>
-      <figure class="portrait">
-        <img src="./assets/profile.webp" alt="성곽과 억새 앞에 서 있는 오우림" width="675" height="900" fetchpriority="high">
-      </figure>
-    </section>
+        <figure class="portrait">
+          <img src="./assets/profile.webp" alt="성곽과 억새 앞에 서 있는 오우림" width="675" height="900" fetchpriority="high">
+          <figcaption>오우림 <span>Woorim Oh</span></figcaption>
+        </figure>
+      </section>
+    </div>
 
     <section class="work section" id="work" aria-labelledby="work-title">
       <div class="shell">
@@ -48,7 +51,7 @@
 
         <article class="case-study" aria-label="모토브 VRD 개발 및 운영 성과">
           <figure class="case-photo">
-            <img src="./assets/motov.webp" alt="택시 지붕에 설치된 모토브 VRD 광고 디스플레이" width="640" height="360">
+            <img src="./assets/motov.webp" alt="택시 지붕에 설치된 모토브 VRD 광고 디스플레이" width="640" height="360" loading="lazy">
             <figcaption>모토브 차량용 광고 디스플레이(VRD)</figcaption>
           </figure>
           <dl class="metrics">
@@ -92,7 +95,7 @@
       <header class="section-heading">
         <p class="eyebrow">2017–2022 <span>·</span> 대학·대학원 프로젝트</p>
         <h2 id="projects-title">연구와 프로젝트</h2>
-        <p>실내외 위치 추정부터 산업 안전, 교통 시뮬레이션까지. 프로젝트를 펼치면 맡은 역할과 구현 내용을 볼 수 있습니다.</p>
+        <p>실내외 위치 추정, 산업 안전, 교통 시뮬레이션을 다룬 프로젝트입니다.</p>
       </header>
 
       <div class="project-grid">
@@ -256,7 +259,10 @@
   <footer class="site-footer">
     <div class="shell footer-inner">
       <p>오우림 <span>·</span> 개발 포트폴리오</p>
-      <a href="#top">맨 위로</a>
+      <div class="footer-links">
+        <a href="https://github.com/slong8254">GitHub</a>
+        <a href="#top">맨 위로</a>
+      </div>
     </div>
   </footer>
 </body>
